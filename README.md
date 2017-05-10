@@ -1,4 +1,4 @@
-# Tkw Power BI
+# Tkw Power BI Samples
 Install this app in your azure subscription and start to play with power bi embedded service
 
 Use Azure Portal to deploy
@@ -9,6 +9,6 @@ Use Azure Portal to deploy
 </a>
 <br/>
 <br/>
-Automatically Deploy 
+Automatically deploy 
 <br/>
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
