@@ -8,6 +8,7 @@ Use Azure Portal to deploy
     <img src="http://azuredeploy.net/deploybutton.png" title="Use Azure Portal to deploy" />
 </a>
 <br/>
-  Automatically Deploy 
+<br/>
+Automatically Deploy 
 <br/>
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
