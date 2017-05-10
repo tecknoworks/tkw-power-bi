@@ -1,0 +1,90 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+    background: url(/Content/Images/Header.png) repeat-x center center;
+    height: 61px;
+}
+
+.container {
+    margin-left: 0px;
+}
+
+a.navbar-brand {
+    margin-top: -6px;
+}
+
+ul.nav.navbar-nav {
+    margin-top: 9px;
+}
+
+h2.report-page-title {
+    font-family: OpenSans;
+    color:  #312772;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: left;
+}
+
+div.container-fluid.body-content {
+    padding-left: 170px;
+    padding-right: 170px;
+}
+
+span#panel-report-title{
+    font-family: OpenSans;
+    color:  #4d5058;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    padding-bottom: 3px;
+}
+
+.label.label-default.report {
+    height:12px;
+    font-family: OpenSans;
+    color: #4d5058;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    background: #dddddd;
+    border-radius: 14px;
+}
+
+.editorTitle{
+    margin-left:20px;
+}
+.editorTitleText {
+    padding-top: 20px;
+    font-weight:bold;
+}
+ .editorTitleText > span {
+    font-weight:normal;
+    font-size:12px;
+}
+#embedArea {
+    padding-left:-150px !important;
+    padding-right:-150px !important;
+}

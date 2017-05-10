@@ -1,0 +1,71 @@
+﻿@model SampleApiConsumer.Models.ODataReports
+@{
+    ViewBag.Title = "Index";
+}
+
+<style scoped>
+    .product a img:hover {
+        background-color: #fff;
+        transition: background .2s linear, color .2s linear;
+        -moz-transition: background .2s linear, color .2s linear;
+        -webkit-transition: background .2s linear, color .2s linear;
+        -o-transition: background .2s linear, color .2s linear;
+    }
+
+    .product {
+        float: left;
+        position: relative;
+        width: 270px;
+        height: 270px;
+        padding: 0;
+        margin: 18px;
+        background-color: #fff;
+    }
+
+    .panel-title {
+        text-align: left;
+        font-size: 24px;
+    }
+
+    .product img {
+        width: 220px;
+        height: 200px;
+        border: 0 none;
+        cursor: pointer;
+    }
+
+    .product p {
+        margin-top: 10px;
+    }
+
+    .product img:hover {
+        background-color: rgba(98, 168, 234, 0.75);
+        transition: background .2s linear, color .2s linear;
+        -moz-transition: background .2s linear, color .2s linear;
+        -webkit-transition: background .2s linear, color .2s linear;
+        -o-transition: background .2s linear, color .2s linear;
+    }
+</style>
+
+<div class="container-fluid body-content body-content">
+    <br />
+    <br />
+    <div class="row reports">
+        @foreach (var report in Model.Items)
+        {
+            <div class="col-md-3 col-sm-10">
+                <div class="product">
+                    <span id="panel-report-title">@report.Name<a class="anchorjs-link" href="/Reports/Detail?id=@report.Id"><span class="anchorjs-icon"></span></a></span>
+                    <br />
+                    <p class="report-contents">
+                        <img src='@Url.Content(report.ThumbnailImageUrl)' alt='@report.Name' onclick="location.href='/Reports/Detail?id=@report.Id';" />
+                    </p>
+                    <span style="margin-top:5px;" id="panel-title">@report.Description<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></span>
+                    <p>
+                        <a href="/Reports/Detail?id=@report.Id" class="btn btn-success" role="button">View</a>
+                    </p>
+                </div>
+            </div>
+        }
+        </div>
+    </div>
