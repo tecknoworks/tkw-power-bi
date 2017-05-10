@@ -8,11 +8,16 @@
 <script src="~/Scripts/powerbi.js"></script>
 
 <div id="embedArea">
+    <div class="form-group pull-right">
+        <div class="btn btn-default back">
+            @Html.ActionLink("Back", "Index", "ReportsController", new { @class = "btn btn-dark" , Area=""})
+        </div>
+    </div>
     <div class="editorTitle">
         <div class="editorTitleText">Sample report<span> (select prefered dispaly mode)</span></div>
         <div id="modeSelector" style="float:left;">
-                <input type="radio" name="embedMode" onclick="OpenViewMode();" value="view" checked="checked"> View  
-                <input type="radio" name="embedMode" onclick="OpenEditMode();" value="edit"> Update 
+                <input type="radio" name="embedMode" onclick="openViewMode();" value="view" checked="checked"> View  
+                <input type="radio" name="embedMode" onclick="openEditMode();" value="edit"> Edit 
         </div>
     </div>
     <div id="reportContainer" style="height:850px; width:100%"></div>
@@ -55,32 +60,24 @@
     });
 
     report.on("error", function (event) {
-        console.log(event.detail);
-        report.off("error");
     });
 
     report.off("saved");
     report.on("saved", function (event) {
-        console.log(event.detail);
-        if (event.detail.saveAs) {
-            console.logText('In order to interact with the new report, create a new token and load the new report');
-        }
+       
     });
 
-    function OpenViewMode() {
-        debugger
+    function openViewMode() {
         config.viewMode = models.ViewMode.View;
         report = powerbi.embed(reportContainer, config);
         report.on("loaded", function () {
             console.log("Loaded");
         });
     }
-    function OpenEditMode() {
-        debugger
+    function openEditMode() {
         config.viewMode = models.ViewMode.Edit;
         report = powerbi.embed(reportContainer, config);
         report.on("loaded", function () {
-            console.log("Loaded");
         });
     }
 </script>

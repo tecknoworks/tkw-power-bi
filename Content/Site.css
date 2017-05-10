@@ -28,6 +28,10 @@ textarea {
     height: 61px;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #FAFAFA;
+}
+
 .container {
     margin-left: 0px;
 }
@@ -42,7 +46,7 @@ ul.nav.navbar-nav {
 
 h2.report-page-title {
     font-family: OpenSans;
-    color:  #312772;
+    color: #312772;
     font-size: 24px;
     font-weight: 300;
     text-align: left;
@@ -53,17 +57,18 @@ div.container-fluid.body-content {
     padding-right: 170px;
 }
 
-span#panel-report-title{
+h4#panel-report-title {
     font-family: OpenSans;
-    color:  #4d5058;
-    font-size: 18px;
-    font-weight: 300;
+    color: #4d5058;
+    font-size: 17px;
     text-align: left;
-    padding-bottom: 3px;
+    margin-left: 25px;
+    font-weight: bold;
+    margin-bottom: 0px!important;
 }
 
 .label.label-default.report {
-    height:12px;
+    height: 12px;
     font-family: OpenSans;
     color: #4d5058;
     font-size: 15px;
@@ -73,18 +78,85 @@ span#panel-report-title{
     border-radius: 14px;
 }
 
-.editorTitle{
-    margin-left:20px;
+.editorTitle {
+    margin-left: 20px;
 }
+
 .editorTitleText {
     padding-top: 20px;
-    font-weight:bold;
+    font-weight: bold;
 }
- .editorTitleText > span {
-    font-weight:normal;
-    font-size:12px;
+
+.editorTitleText > span {
+    font-weight: normal;
+    font-size: 12px;
 }
+
 #embedArea {
-    padding-left:-150px !important;
-    padding-right:-150px !important;
+    padding-left: -150px !important;
+    padding-right: -150px !important;
+}
+
+.product a img:hover {
+    background-color: #fff;
+    transition: background .2s linear, color .2s linear;
+    -moz-transition: background .2s linear, color .2s linear;
+    -webkit-transition: background .2s linear, color .2s linear;
+    -o-transition: background .2s linear, color .2s linear;
+}
+
+.product {
+    float: left;
+    position: relative;
+    width: 270px;
+    height: 279px;
+    padding: 0;
+    margin: 18px;
+    background-color: #fff;
+}
+
+.panel-title {
+    text-align: left;
+    font-size: 24px;
+}
+
+.product img {
+    width: 220px;
+    height: 200px;
+    border: 0 none;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+.product img:hover {
+    background-color: rgba(98, 168, 234, 0.75);
+    transition: background .2s linear, color .2s linear;
+    -moz-transition: background .2s linear, color .2s linear;
+    -webkit-transition: background .2s linear, color .2s linear;
+    -o-transition: background .2s linear, color .2s linear;
+}
+
+p.report-contents{
+    margin:0;
+}
+span#panel-title-description {
+    margin-left:10px;
+    margin-top: 10px !important;
+    margin-bottom:10px !important;
+    display: inline-block;
+}
+
+p.view-btn {
+    margin-top: 10px;
+}
+
+.btn.btn-default.back {
+    padding: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #d21559;
+}
+
+a.btn.btn-dark {
+    color: #fff!important;
 }
